@@ -1,0 +1,1 @@
+export const INBOX_SDK_APP_ID = 'sdk_gmail-templates_d763639e5c';

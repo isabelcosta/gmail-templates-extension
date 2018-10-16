@@ -1,0 +1,6 @@
+Hey,
+
+I'm Isabel trying to learn React and ... JavaScript!
+
+Best,
+Isabel
