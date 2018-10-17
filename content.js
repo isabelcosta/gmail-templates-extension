@@ -1,7 +1,5 @@
 
-var iframeDocument = "<iframe src=\"https://xyz-amplemarket-challenge.herokuapp.com/templates\"></iframe>"
-
-
+var iframeDocument = "<iframe src=\"https://my-backend.herokuapp.com\"></iframe>"
 
 InboxSDK.load('1', 'sdk_gmail-templates_d763639e5c').then(function(sdk){
 
@@ -26,7 +24,10 @@ InboxSDK.load('1', 'sdk_gmail-templates_d763639e5c').then(function(sdk){
 				});
 				
 				event.composeView.insertTextIntoBodyAtCursor('Hello World!');
+				
+				// TODO: grab template from iframe
 				//event.composeView.setBodyText("Lola Maria");
+
 			},
 		});
 
