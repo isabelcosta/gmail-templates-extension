@@ -8,10 +8,18 @@
         "https://mail.google.com/*",
         "https://inbox.google.com/*"
       ],
-      "js": ["inboxsdk.js","content.js", "TemplatesList.js"],
+      "js": [
+        "static/inboxsdk.js",
+        "static/react.development.js",
+        "static/react-dom.development.js",
+        "static/babel.min.js",
+        "content.js", 
+        "TemplatesList.js"
+      ],
       "run_at": "document_end"
     }
   ],
+  "content_security_policy": "script-src 'self' https://unpkg.com; object-src 'self'",
   "permissions": [
     "https://mail.google.com/",
     "https://inbox.google.com/"

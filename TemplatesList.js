@@ -22,25 +22,11 @@ class TemplatesApp extends React.Component {
                             ], 
                         text: ''
                   };
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+/*         this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this); */
     }
   
-    render() {
-      return e(
-        "div",
-        null,
-        e("h3", null, "Templates"),
-        e(TemplatesList, { items: this.state.items })
-      );
-/*         <div>
-          <h3>Templates</h3>
-          <TemplatesList items={this.state.items} />
-        </div>
-      ); */
-    }
-  
-    handleChange(e) {
+/*     handleChange(e) {
       this.setState({ text: e.target.value });
     }
   
@@ -57,7 +43,21 @@ class TemplatesApp extends React.Component {
         items: state.items.concat(newItem),
         text: ''
       }));
-    }
+    } */
+      
+    render() {
+        return e(
+          "div",
+          null,
+          e("h3", null, "Templates"),
+          e(TemplatesList, { items: this.state.items })
+        );
+  /*         <div>
+            <h3>Templates</h3>
+            <TemplatesList items={this.state.items} />
+          </div>
+        ); */
+      }
 }
   
 class TemplatesList extends React.Component {
