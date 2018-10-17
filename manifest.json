@@ -19,7 +19,7 @@
       "run_at": "document_end"
     }
   ],
-  "content_security_policy": "script-src 'self' https://unpkg.com; object-src 'self'",
+  "content_security_policy": "script-src 'self' https://unpkg.com https://xyz-amplemarket-challenge.herokuapp.com ; object-src 'self'",
   "permissions": [
     "https://mail.google.com/",
     "https://inbox.google.com/"

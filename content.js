@@ -1,3 +1,8 @@
+
+var iframeDocument = "<iframe src=\"https://xyz-amplemarket-challenge.herokuapp.com/templates\"></iframe>"
+
+
+
 InboxSDK.load('1', 'sdk_gmail-templates_d763639e5c').then(function(sdk){
 
 	// the SDK has been loaded, now do something with it!
@@ -13,11 +18,11 @@ InboxSDK.load('1', 'sdk_gmail-templates_d763639e5c').then(function(sdk){
 					title: "Pick a template",
 					buttons: [
 						{
-							title: "Add template",
-							text: "Add"
+							title: "Choose template",
+							text: "Ok"
 						}
 					],
-					el: "<div id=\"templates_list_container\"></div>"
+					el: iframeDocument
 				});
 				
 				event.composeView.insertTextIntoBodyAtCursor('Hello World!');

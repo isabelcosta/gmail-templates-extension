@@ -26,10 +26,15 @@ class TemplatesApp extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this); */
     }
   
-/*     handleChange(e) {
+    onModalItemClick(e) {
+        this.setState({ text: e.target.value });
+    }
+    
+/*
+    handleChange(e) {
       this.setState({ text: e.target.value });
     }
-  
+
     handleSubmit(e) {
       e.preventDefault();
       if (!this.state.text.length) {
@@ -43,8 +48,47 @@ class TemplatesApp extends React.Component {
         items: state.items.concat(newItem),
         text: ''
       }));
-    } */
+    }
+
       
+    componentDidMount() {
+
+        const self = this;
+
+        InboxSDK.load('1', 'sdk_gmail-templates_d763639e5c').then(function(sdk){
+
+            // the SDK has been loaded, now do something with it!
+            sdk.Compose.registerComposeViewHandler(function(composeView){
+        
+                // a compose view has come into existence, do something with it!
+                composeView.addButton({
+                    title: "Use Templates",
+                    iconUrl: 'http://icons.iconarchive.com/icons/google/noto-emoji-objects/128/62941-card-file-box-icon.png',
+                    onClick: function(event) {
+                        
+                        sdk.Widgets.showModalView({
+                            title: "Pick a template",
+                            buttons: [
+                                {
+                                    title: "Choose template",
+                                    text: "Ok",
+                                    onClick: onModalItemClick(event)
+                                }
+                            ],
+                            el: iframeDocument
+                        });
+                        
+                        event.composeView.insertTextIntoBodyAtCursor('Hello World!');
+                        //event.composeView.setBodyText("Lola Maria");
+                    },
+                });
+        
+            });
+        
+        });
+
+    }
+*/
     render() {
         return e(
           "div",
