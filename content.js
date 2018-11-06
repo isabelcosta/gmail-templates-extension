@@ -1,5 +1,5 @@
 
-var iframeDocument = "<iframe src=\"https://my-backend.herokuapp.com\"></iframe>"
+var iframeDocument = '<iframe src="https://wonderful-newton-e3e9d4.netlify.com"></iframe>'
 
 InboxSDK.load('1', 'sdk_gmail-templates_d763639e5c').then(function(sdk){
 
